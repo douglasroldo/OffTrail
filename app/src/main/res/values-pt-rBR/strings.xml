@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OffTrail</string>
+    <string name="msg_splash">Carregando ...</string>
+    <string name="button_sair">Sair</string>
+    <string name="button_login">Entrar</string>
+    <string name="edt_login">Entre com o login</string>
+    <string name="edt_senha">Entre com a senha</string>
+    <string name="edit_nome_trilheiro">Nome do trilheiro</string>
+    <string name="edit_idade_trilheiro">Idade do trilheiro</string>
+    <string name="edit_moto_trilheiro">Moto do trilheiro</string>
+    <string name="button_cadastrar">Cadastrar</string>
+    <string name="button_cancelar">Cancelar</string>
+</resources>
