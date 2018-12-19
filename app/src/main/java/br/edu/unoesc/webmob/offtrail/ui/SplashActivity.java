@@ -9,12 +9,16 @@ import android.widget.EditText;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Fullscreen;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.WindowFeature;
 
+import java.sql.SQLException;
+
 import br.edu.unoesc.webmob.offtrail.R;
+import br.edu.unoesc.webmob.offtrail.helper.DatabaseHelper;
 
 @EActivity(R.layout.activity_splash)
 @Fullscreen
@@ -22,11 +26,26 @@ import br.edu.unoesc.webmob.offtrail.R;
 public class SplashActivity extends AppCompatActivity {
 
     @AfterViews
-    @Background(delay = 3000)
+    @Background(delay = 1000)
     public void abrirLogin() {
         Intent itLogin = new Intent(this, LoginActivity_.class);
         startActivity(itLogin);
         finish();
     }
 
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_splash);
+//
+//        Handler h = new Handler();
+//        h.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent itLogin = new Intent(SplashActivity.this, LoginActivity.class);
+//                startActivity(itLogin);
+//                finish();
+//            }
+//        }, 3000);
+//    }
 }

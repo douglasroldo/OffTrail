@@ -8,17 +8,24 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Fullscreen;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.WindowFeature;
 
+import java.sql.SQLException;
+
 import br.edu.unoesc.webmob.offtrail.R;
+import br.edu.unoesc.webmob.offtrail.helper.DatabaseHelper;
+import br.edu.unoesc.webmob.offtrail.model.Usuario;
 
 @EActivity(R.layout.activity_login)
 @Fullscreen
 @WindowFeature(Window.FEATURE_NO_TITLE)
 public class LoginActivity extends AppCompatActivity {
+    @Bean
+    DatabaseHelper dh;
     @ViewById
     EditText edtLogin;
     @ViewById
@@ -34,12 +41,21 @@ public class LoginActivity extends AppCompatActivity {
         String strLogin = edtLogin.getText().toString();
         String strSenha = edtSenha.getText().toString();
 
-        if (strLogin != null && strSenha != null &&
-                !strLogin.trim().equals("") && !strSenha.trim().equals("") &&
-                strLogin.equals("douglas") && strSenha.equals("douglas")) {
-            Intent itPrincipal = new Intent(this, PrincipalActivity.class);
-            startActivity(itPrincipal);
-            finish();
+        if (strLogin != null && strSenha != null && !strLogin.trim().equals("") && !strSenha.trim().equals("")) {
+            Usuario u = dh.validaLogin(strLogin, strSenha);
+            if (u != null) {
+                Intent itPrincipal = new Intent(this, PrincipalActivity_.class);
+                // passando parâmetro para outra tela
+                // via HashMap(chave, valor)
+                itPrincipal.putExtra("usuario", u);
+                startActivity(itPrincipal);
+                finish();
+            } else {
+                Toast.makeText(this, "Usuário não encontrado!", Toast.LENGTH_LONG).show();
+                edtLogin.setText("");
+                edtSenha.setText("");
+                edtLogin.requestFocus();
+            }
         } else {
             Toast.makeText(this, "Login e/ou senha inválidos!", Toast.LENGTH_LONG).show();
             edtLogin.setText("");

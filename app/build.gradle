@@ -11,6 +11,9 @@ buildscript {
 repositories {
     mavenCentral()
     mavenLocal()
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
 }
 
 apply plugin: 'com.android.application'
@@ -19,6 +22,9 @@ def AAVersion = '4.5.1'
 dependencies {
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    annotationProcessor "org.androidannotations:rest-spring:$AAVersion"
+    implementation "org.androidannotations:rest-spring-api:$AAVersion"
+    implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
 }
 
 android {
@@ -37,6 +43,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
 }
 
 dependencies {
@@ -50,6 +66,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/ormlite-android-5.1.jar')
     implementation files('libs/ormlite-core-5.1.jar')
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
 }
 
 dependencies {

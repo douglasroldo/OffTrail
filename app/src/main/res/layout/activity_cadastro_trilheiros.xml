@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/edtNomeTrilheiro"
-        android:layout_width="368dp"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -16,41 +16,23 @@
         android:ems="10"
         android:hint="@string/edit_nome_trilheiro"
         android:inputType="textPersonName"
-        android:text="@string/edit_nome_trilheiro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imvFoto" />
 
     <EditText
         android:id="@+id/edtIdadeTrilheiro"
-        android:layout_width="368dp"
+        android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/edit_idade_trilheiro"
         android:inputType="textPersonName"
-        android:text="@string/edit_idade_trilheiro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNomeTrilheiro" />
-
-    <EditText
-        android:id="@+id/edtMotoTrilheiro"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/edit_moto_trilheiro"
-        android:inputType="textPersonName"
-        android:text="@string/edit_moto_trilheiro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtIdadeTrilheiro" />
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -63,8 +45,7 @@
         android:text="@string/button_cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtMotoTrilheiro"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintTop_toBottomOf="@+id/spnGrupos" />
 
     <Button
         android:id="@+id/btnCancelar"
@@ -79,7 +60,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/edtMotoTrilheiro"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintTop_toBottomOf="@+id/spnGrupos" />
+
+    <Spinner
+        android:id="@+id/spnMotos"
+        android:layout_width="342dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtIdadeTrilheiro" />
+
+    <Spinner
+        android:id="@+id/spnGrupos"
+        android:layout_width="342dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnMotos" />
+
+    <ImageView
+        android:id="@+id/imvFoto"
+        android:layout_width="224dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/white" />
 
 </android.support.constraint.ConstraintLayout>

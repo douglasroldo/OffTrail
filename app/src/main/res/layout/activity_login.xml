@@ -16,7 +16,7 @@
         android:onClick="entrar"
         android:text="@string/button_login"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,7 @@
         android:onClick="sair"
         android:text="@string/button_sair"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,6 @@
         android:ems="10"
         android:hint="@string/edt_login"
         android:inputType="textPersonName"
-        android:textColorLink="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +69,6 @@
         android:ems="10"
         android:hint="@string/edt_senha"
         android:inputType="textPassword"
-        android:textColorLink="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtLogin" />

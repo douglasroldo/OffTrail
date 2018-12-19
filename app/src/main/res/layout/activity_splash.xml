@@ -16,7 +16,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/msg_splash"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

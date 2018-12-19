@@ -17,4 +17,13 @@
     <string name="edit_moto_trilheiro">Moto do trilheiro</string>
     <string name="button_cadastrar">Cadastrar</string>
     <string name="button_cancelar">Cancelar</string>
+    <string name="desc_app">App de gerenciamento para trilheiros.</string>
+    <string name="copyright_app">Copyright © 2018 Adriana L. F. Alves, Deiziane Buganti</string>
+    <string name="disciplina">Disciplina: Desenvolvimento Android</string>
+    <string name="instituicao">Pós-Graduação, Unoesc - SMO</string>
+    <string name="button_voltar">Voltar</string>
+    <string name="action_sobre">Sobre</string>
+    <string name="preferencias">Preferências</string>
+    <string name="cor_fundo">Selecione a cor do plano de fundo:</string>
+    <string name="btn_salvar">Salvar</string>
 </resources>
